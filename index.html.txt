@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tư tưởng Hồ Chí Minh & Giới trẻ thời đại số</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            50: '#fdfbf7',
+                            100: '#fbf7ed',
+                            200: '#f4ebd2',
+                            500: '#d4af37',
+                            600: '#b89229',
+                            700: '#91711e',
+                        },
+                        crimson: {
+                            50: '#fef3f3',
+                            100: '#ffebeb',
+                            500: '#a21c26',
+                            600: '#85141c',
+                            700: '#680e14',
+                            800: '#4d080c',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+       .header-font {
+            font-family: 'Playfair Display', serif;
+        }
+       .bg-pattern {
+            background-color: #fdfbf7;
+            background-image: radial-gradient(#d4af37 0.5px, transparent 0.5px), radial-gradient(#d4af37 0.5px, #fdfbf7 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            background-opacity: 0.05;
+        }
+    </style>
+</head>
+<body class="bg-gold-50 text-slate-800 selection:bg-gold-200 selection:text-crimson-800">
+
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gold-200/50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-crimson-600 rounded-lg flex items-center justify-center text-gold-200 shadow-md">
+                    <i class="fa-solid fa-star text-xl"></i>
+                </div>
+                <div>
+                    <span class="block text-xs uppercase tracking-widest text-gold-700 font-semibold">Tuyên giáo & Học tập</span>
+                    <h1 class="text-lg font-bold text-crimson-700 tracking-tight">Hồ Chí Minh & Tuổi Trẻ</h1>
+                </div>
+            </div>
+            
+            <nav class="hidden md:flex items-center gap-1">
+                <button onclick="switchTab('tab-ideology')" class="nav-btn px-4 py-2 rounded-lg text-sm font-semibold transition duration-200 text-crimson-700 bg-gold-100" id="btn-tab-ideology">Nền Tảng Đạo Đức</button>
+                <button onclick="switchTab('tab-reality')" class="nav-btn px-4 py-2 rounded-lg text-sm font-semibold transition duration-200 text-slate-600 hover:text-crimson-700 hover:bg-slate-50" id="btn-tab-reality">Thực Trạng Lối Sống</button>
+                <button onclick="switchTab('tab-quiz')" class="nav-btn px-4 py-2 rounded-lg text-sm font-semibold transition duration-200 text-slate-600 hover:text-crimson-700 hover:bg-slate-50" id="btn-tab-quiz">Trắc Nghiệm Bản Thân</button>
+                <button onclick="switchTab('tab-solutions')" class="nav-btn px-4 py-2 rounded-lg text-sm font-semibold transition duration-200 text-slate-600 hover:text-crimson-700 hover:bg-slate-50" id="btn-tab-solutions">Hệ Giải Pháp</button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="relative bg-crimson-800 text-white overflow-hidden py-16 sm:py-24 border-b-4 border-gold-500">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(162,28,38,0.8),transparent)] z-0"></div>
+        <div class="absolute right-0 bottom-0 opacity-10 transform translate-x-20 translate-y-20 z-0">
+            <i class="fa-solid fa-certificate text-[500px] text-gold-500"></i>
+        </div>
+        
+        <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-crimson-700/60 border border-crimson-500 text-gold-200 text-xs font-semibold uppercase tracking-wider mb-6">
+                <i class="fa-solid fa-feather-pointed"></i> Chuyên Đề Lý Luận & Thực Tiễn
+            </span>
+            <h1 class="header-font text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight mb-6 text-gold-100">
+                TƯ TƯỞNG HỒ CHÍ MINH VỀ VĂN HÓA, ĐẠO ĐỨC<br>
+                <span class="text-gold-500 font-normal italic">và Bản Lĩnh Giới Trẻ Trước "Sóng Ảo"</span>
+            </h1>
+            <p class="text-lg text-crimson-100 max-w-3xl mx-auto mb-8 font-light leading-relaxed">
+                Định hướng nhân cách và phục hưng các giá trị cốt lõi, nâng cao năng lực phản biện của thế hệ trẻ trước xu hướng thực dụng và căn bệnh chuộng hình thức trong kỷ nguyên số.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <button onclick="switchTab('tab-quiz')" class="px-6 py-3 bg-gold-500 text-crimson-800 font-bold rounded-lg shadow-lg hover:bg-gold-600 hover:scale-105 transition duration-200 flex items-center gap-2">
+                    <i class="fa-solid fa-circle-play"></i> Bắt đầu Trắc nghiệm
+                </button>
+                <button onclick="switchTab('tab-ideology')" class="px-6 py-3 bg-crimson-700 text-white border border-crimson-500 font-semibold rounded-lg hover:bg-crimson-600 transition duration-200 flex items-center gap-2">
+                    <i class="fa-solid fa-book-open"></i> Đọc báo cáo nghiên cứu
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gold-100 py-8 border-b border-gold-200/60">
+        <div class="max-w-4xl mx-auto px-4 text-center relative">
+            <div id="quote-container" class="transition-opacity duration-300">
+                <p class="header-font text-lg sm:text-xl italic text-crimson-800 font-semibold mb-3">
+                    "Văn hóa phải soi đường cho quốc dân đi."
+                </p>
+                <span class="text-xs uppercase tracking-wider font-bold text-gold-700">— Chủ tịch Hồ Chí Minh</span>
+            </div>
+            <div class="flex justify-center gap-2 mt-4">
+                <button onclick="prevQuote()" class="w-8 h-8 rounded-full bg-white border border-gold-300 flex items-center justify-center text-crimson-700 hover:bg-gold-50 transition"><i class="fa-solid fa-chevron-left text-xs"></i></button>
+                <button onclick="nextQuote()" class="w-8 h-8 rounded-full bg-white border border-gold-300 flex items-center justify-center text-crimson-700 hover:bg-gold-50 transition"><i class="fa-solid fa-chevron-right text-xs"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
+        <div id="tab-ideology" class="tab-content block space-y-12">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="header-font text-2xl sm:text-3xl font-bold text-crimson-800 mb-4">Hệ Thống Đạo Đức Cách Mạng Cốt Lõi</h2>
+                <p class="text-slate-600">Đạo đức cách mạng theo tư tưởng Hồ Chí Minh là chuẩn mực khoa học định hình con người mới. Trong đó, hệ chuẩn mực Cần - Kiệm - Liêm - Chính mang tính tương tác biện chứng chặt chẽ.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <div class="lg:col-span-5 space-y-3">
+                    <h3 class="text-xs uppercase tracking-widest font-bold text-gold-700 mb-2 px-2">Bấm chọn từng đức tính để xem phân tích</h3>
+                    
+                    <button onclick="showVirtue('can')" id="btn-virtue-can" class="virtue-btn w-full text-left p-4 rounded-xl border border-gold-200 bg-white hover:border-crimson-500 hover:shadow-md transition duration-200 flex items-center gap-4 group active-virtue">
+                        <div class="w-10 h-10 rounded-lg bg-crimson-50 border border-crimson-100 flex items-center justify-center text-crimson-700 font-bold text-lg group-hover:bg-crimson-500 group-hover:text-white transition">C</div>
+                        <div>
+                            <h4 class="font-bold text-crimson-800">CẦN</h4>
+                            <p class="text-xs text-slate-500">Lao động cần cù, siêng năng, tự giác...</p>
+                        </div>
+                    </button>
+
+                    <button onclick="showVirtue('kiem')" id="btn-virtue-kiem" class="virtue-btn w-full text-left p-4 rounded-xl border border-gold-200 bg-white hover:border-crimson-500 hover:shadow-md transition duration-200 flex items-center gap-4 group">
+                        <div class="w-10 h-10 rounded-lg bg-crimson-50 border border-crimson-100 flex items-center justify-center text-crimson-700 font-bold text-lg group-hover:bg-crimson-500 group-hover:text-white transition">K</div>
+                        <div>
+                            <h4 class="font-bold text-crimson-800">KIỆM</h4>
+                            <p class="text-xs text-slate-500">Tiết kiệm thời gian, công sức và của cải...</p>
+                        </div>
+                    </button>
+
+                    <button onclick="showVirtue('liem')" id="btn-virtue-liem" class="virtue-btn w-full text-left p-4 rounded-xl border border-gold-200 bg-white hover:border-crimson-500 hover:shadow-md transition duration-200 flex items-center gap-4 group">
+                        <div class="w-10 h-10 rounded-lg bg-crimson-50 border border-crimson-100 flex items-center justify-center text-crimson-700 font-bold text-lg group-hover:bg-crimson-500 group-hover:text-white transition">L</div>
+                        <div>
+                            <h4 class="font-bold text-crimson-800">LIÊM</h4>
+                            <p class="text-xs text-slate-500">Sự trong sạch, tôn trọng của công và của dân...</p>
+                        </div>
+                    </button>
+
+                    <button onclick="showVirtue('chinh')" id="btn-virtue-chinh" class="virtue-btn w-full text-left p-4 rounded-xl border border-gold-200 bg-white hover:border-crimson-500 hover:shadow-md transition duration-200 flex items-center gap-4 group">
+                        <div class="w-10 h-10 rounded-lg bg-crimson-50 border border-crimson-100 flex items-center justify-center text-crimson-700 font-bold text-lg group-hover:bg-crimson-500 group-hover:text-white transition">C</div>
+                        <div>
+                            <h4 class="font-bold text-crimson-800">CHÍNH</h4>
+                            <p class="text-xs text-slate-500">Thẳng thắn, đứng đắn, trung thực, khiêm tốn...</p>
+                        </div>
+                    </button>
+
+                    <button onclick="showVirtue('chicong')" id="btn-virtue-chicong" class="virtue-btn w-full text-left p-4 rounded-xl border border-gold-200 bg-white hover:border-crimson-500 hover:shadow-md transition duration-200 flex items-center gap-4 group">
+                        <div class="w-10 h-10 rounded-lg bg-crimson-50 border border-crimson-100 flex items-center justify-center text-crimson-700 font-bold text-lg group-hover:bg-crimson-500 group-hover:text-white transition">CT</div>
+                        <div>
+                            <h4 class="font-bold text-crimson-800">CHÍ CONG VÔ TƯ</h4>
+                            <p class="text-xs text-slate-500">Đỉnh cao đạo đức, chí công, phụng sự lợi ích chung...</p>
+                        </div>
+                    </button>
+                </div>
+
+                <div class="lg:col-span-7 bg-white p-6 sm:p-8 rounded-2xl border border-gold-200 shadow-sm relative min-h-[400px] flex flex-col justify-between">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-gold-200/10 rounded-bl-full flex items-center justify-center text-gold-500">
+                        <i class="fa-solid fa-bookmark text-4xl transform translate-x-3 -translate-y-3"></i>
+                    </div>
+                    
+                    <div id="virtue-detail" class="space-y-6">
+                        <div class="flex items-center gap-3">
+                            <span class="text-xs uppercase tracking-widest font-bold text-crimson-600">Đại Cương Đạo Đức</span>
+                            <div class="h-[1px] flex-1 bg-gold-200"></div>
+                        </div>
+                        <h3 class="header-font text-3xl font-bold text-crimson-800" id="v-title">Cần (Cần Cù, Siêng Năng)</h3>
+                        <p class="text-slate-600 leading-relaxed" id="v-desc">Lao động cần cù, siêng năng, tự giác, có kế hoạch và đạt hiệu suất cao. Theo Chủ tịch Hồ Chí Minh, "Cần" không chỉ là chăm chỉ chân tay mà phải gắn liền với tư duy sáng tạo, kế hoạch cụ thể nhằm tối ưu hóa năng suất lao động.</p>
+                        
+                        <div class="bg-crimson-50 border-l-4 border-crimson-500 p-4 rounded-r-lg">
+                            <h5 class="text-sm font-bold text-crimson-800 uppercase tracking-wider mb-1"><i class="fa-solid fa-code-merge mr-2"></i>Tương tác biện chứng</h5>
+                            <p class="text-sm text-slate-700 italic" id="v-interaction">Là tiền đề tạo ra của cải vật chất; phải đi đôi với "Kiệm" như hai chân của một con người. Cần mà không Kiệm giống như chiếc thùng không đáy; Kiệm mà không Cần thì lấy gì mà Kiệm.</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-4 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs text-slate-400"><i class="fa-regular fa-clock mr-1"></i> Tài liệu học tập chuyên đề khóa mới</span>
+                        <button onclick="switchTab('tab-reality')" class="text-xs font-bold text-crimson-700 hover:text-crimson-800 flex items-center gap-1 transition">Xem ứng dụng phản biện trước giới trẻ <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-crimson-700 text-white rounded-2xl p-6 sm:p-10 flex flex-col md:flex-row items-center gap-6 shadow-lg">
+                <div class="w-16 h-16 rounded-full bg-crimson-600 border border-crimson-500 flex items-center justify-center text-gold-200 shrink-0">
+                    <i class="fa-solid fa-shield-virus text-3xl"></i>
+                </div>
+                <div class="space-y-2 text-center md:text-left flex-1">
+                    <h3 class="text-xl font-bold text-gold-200">Chủ nghĩa cá nhân – "Kẻ địch bên trong" nguy hiểm nhất</h3>
+                    <p class="text-sm text-crimson-100 leading-relaxed max-w-4xl">
+                        Người chỉ rõ chủ nghĩa cá nhân là thói vị kỷ, "giặc nội xâm" vô hình cực kỳ nguy hiểm, ngấm ngầm sinh ra các căn bệnh hủ hóa, tham ô, lãng phí và đặc biệt là thói kiêu ngạo, giả dối, ham chuộng hình thức xa hoa.
+                    </p>
+                </div>
+                <button onclick="switchTab('tab-reality')" class="px-5 py-2.5 bg-white text-crimson-800 text-sm font-bold rounded-lg hover:bg-gold-200 transition shrink-0">Phân tích thực trạng <i class="fa-solid fa-chevron-right ml-1"></i></button>
+            </div>
+        </div>
+
+        <div id="tab-reality" class="tab-content hidden space-y-12">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="header-font text-2xl sm:text-3xl font-bold text-crimson-800 mb-4">Lối Sống Thực Dụng & Căn Bệnh "Sống Ảo"</h2>
+                <p class="text-slate-600">Đứng trước áp lực của thời đại số và sự trỗi dậy của các nền tảng mạng xã hội, một bộ phận giới trẻ đang rơi vào trạng thái lệch chuẩn nghiêm trọng về hệ giá trị tinh thần.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 hover:shadow-md transition duration-200">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="w-8 h-8 rounded-lg bg-orange-100 text-orange-600 flex items-center justify-center font-bold text-lg"><i class="fa-solid fa-coins"></i></span>
+                        <h3 class="header-font text-xl font-bold text-slate-800">Lối Sống Thực Dụng</h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <span class="text-orange-500 mt-1"><i class="fa-solid fa-circle-exclamation"></i></span>
+                            <p class="text-sm text-slate-600"><strong class="text-slate-800">Phai nhạt lý tưởng sống:</strong> Lấy giá trị tiền bạc và lợi ích vật chất trước mắt làm thước đo tối cao cho thành công, chà đạp đạo nghĩa.</p>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-orange-500 mt-1"><i class="fa-solid fa-circle-exclamation"></i></span>
+                            <p class="text-sm text-slate-600"><strong class="text-slate-800">Thương mại hóa nhân phẩm:</strong> Chấp nhận tham gia các dịch vụ "sugar baby - dùng tình đổi tiền" hoặc các chiêu trò độc hại trên mạng để trục lợi.</p>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-orange-500 mt-1"><i class="fa-solid fa-circle-exclamation"></i></span>
+                            <p class="text-sm text-slate-600"><strong class="text-slate-800">Học đường bị lệch lạc:</strong> Chọn ngành học, nghề nghiệp thuần túy bằng phép tính "kiếm tiền nhanh", từ bỏ việc bồi đắp tri thức căn bản.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 hover:shadow-md transition duration-200">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="w-8 h-8 rounded-lg bg-violet-100 text-violet-600 flex items-center justify-center font-bold text-lg"><i class="fa-solid fa-mobile-screen-button"></i></span>
+                        <h3 class="header-font text-xl font-bold text-slate-800">Trào Lưu "Sống Ảo"</h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <span class="text-violet-500 mt-1"><i class="fa-solid fa-triangle-exclamation"></i></span>
+                            <p class="text-sm text-slate-600"><strong class="text-slate-800">Trào lưu "Phông bạt":</strong> Giả tạo sự giàu có, vay mượn chi tiêu xa hoa để check-in trực tuyến, lẩn tránh hoàn cảnh thực tế.</p>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-violet-500 mt-1"><i class="fa-solid fa-triangle-exclamation"></i></span>
+                            <p class="text-sm text-slate-600"><strong class="text-slate-800">Lệ thuộc vào tương tác số:</strong> Coi các chỉ số thích, theo dõi, bình luận làm nguồn sống tinh thần duy nhất, dễ rơi vào trầm cảm khi ít tương tác.</p>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-violet-500 mt-1"><i class="fa-solid fa-triangle-exclamation"></i></span>
+                            <p class="text-sm text-slate-600"><strong class="text-slate-800">Mất cân bằng Thân - Tâm:</strong> Thức khuya liên tục lướt mạng, thờ ơ xa lánh người thân trong gia đình, hủy hoại thể lực và tinh thần.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <h3 class="header-font text-xl font-bold text-crimson-800 text-center"><i class="fa-solid fa-scale-balanced mr-2"></i>Bảng Đối Chiếu Biện Chứng: Đạo Đức Cách Mạng vs "Sống Ảo"</h3>
+                <div class="overflow-x-auto border border-gold-200 rounded-xl shadow-sm">
+                    <table class="w-full text-sm text-left text-slate-600 bg-white min-w-[600px]">
+                        <thead class="bg-crimson-50 text-crimson-800 uppercase text-xs font-bold border-b border-gold-200">
+                            <tr>
+                                <th scope="col" class="px-6 py-4">Tiêu chí đối chiếu</th>
+                                <th scope="col" class="px-6 py-4">Hệ giá trị đạo đức cách mạng</th>
+                                <th scope="col" class="px-6 py-4">Lối ứng xử của "Sống Ảo"</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100">
+                            <tr>
+                                <td class="px-6 py-4 font-semibold text-slate-900">Thái độ với bản thân</td>
+                                <td class="px-6 py-4 text-emerald-700 bg-emerald-50/20">Trung thực, khiêm tốn, bền bỉ mài giũa năng lực thật.</td>
+                                <td class="px-6 py-4 text-rose-700 bg-rose-50/20">Tự cao tự đại, ngụy tạo hình ảnh lung linh giả tạo.</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-semibold text-slate-900">Thái độ với vật chất</td>
+                                <td class="px-6 py-4 text-emerald-700 bg-emerald-50/20">Thực hành chữ Kiệm, lối sống giản dị, tôn trọng của công.</td>
+                                <td class="px-6 py-4 text-rose-700 bg-rose-50/20">Trưng trổ xa xỉ, tiêu dùng phô trương vượt mức tài chính.</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-semibold text-slate-900">Mục tiêu hành động</td>
+                                <td class="px-6 py-4 text-emerald-700 bg-emerald-50/20">Chí công vô tư, phụng sự Tổ quốc, giúp đỡ đồng bào thực tế.</td>
+                                <td class="px-6 py-4 text-rose-700 bg-rose-50/20">Vị kỷ, tìm kiếm sự công nhận, hào nhoáng nhất thời trên mạng.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="tab-quiz" class="tab-content hidden space-y-8 max-w-4xl mx-auto">
+            <div class="text-center">
+                <h2 class="header-font text-2xl sm:text-3xl font-bold text-crimson-800 mb-2">Trắc Nghiệm Tự Nhận Thức Lối Sống</h2>
+                <p class="text-sm text-slate-500">Khảo sát giúp bạn tự phản tỉnh về thói quen sinh hoạt và tư duy đạo đức cá nhân.</p>
+            </div>
+
+            <div id="quiz-card" class="bg-white p-6 sm:p-10 rounded-2xl border border-gold-200 shadow-sm space-y-6">
+                <div class="flex items-center justify-between text-xs text-slate-400">
+                    <span id="quiz-progress">Câu hỏi 1 / 4</span>
+                    <span id="quiz-badge" class="px-2 py-1 bg-gold-100 rounded text-gold-700 font-bold uppercase">Nhận thức</span>
+                </div>
+
+                <div class="w-full bg-slate-100 rounded-full h-1.5">
+                    <div id="quiz-bar" class="bg-crimson-600 h-1.5 rounded-full transition-all duration-300" style="width: 25%"></div>
+                </div>
+
+                <h3 id="quiz-question" class="header-font text-xl font-bold text-crimson-800">
+                    Bạn thường dành bao nhiêu thời gian sử dụng mạng xã hội mỗi ngày?
+                </h3>
+
+                <div id="quiz-options" class="space-y-3">
+                    </div>
+            </div>
+
+            <div id="quiz-result" class="hidden bg-white p-6 sm:p-10 rounded-2xl border border-gold-200 shadow-md space-y-6 text-center">
+                <div class="w-20 h-20 bg-gold-100 rounded-full flex items-center justify-center text-gold-600 mx-auto text-3xl">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+                <h3 class="header-font text-2xl font-bold text-crimson-800">Kết quả đánh giá bản thân</h3>
+                <div class="p-4 bg-crimson-50 rounded-xl border border-crimson-100 max-w-xl mx-auto">
+                    <p id="result-text" class="text-sm text-slate-700 leading-relaxed">
+                        Bạn có lối sống cân bằng, sử dụng công nghệ lành mạnh và đề cao các mối quan hệ thực tế. Bạn duy trì được bản lĩnh tự chủ tốt.
+                    </p>
+                </div>
+                <p class="text-xs text-slate-400">Khuyến nghị dựa trên nội dung chuyên đề giáo dục lối sống văn hóa Hồ Chí Minh.</p>
+                <div class="flex justify-center gap-4">
+                    <button onclick="restartQuiz()" class="px-5 py-2.5 bg-slate-100 text-slate-700 text-sm font-semibold rounded-lg hover:bg-slate-200 transition">Thực hiện lại</button>
+                    <button onclick="switchTab('tab-solutions')" class="px-5 py-2.5 bg-crimson-600 text-white text-sm font-semibold rounded-lg hover:bg-crimson-700 transition">Xem hệ giải pháp</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="tab-solutions" class="tab-content hidden space-y-12">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="header-font text-2xl sm:text-3xl font-bold text-crimson-800 mb-4">Giải Pháp Định Hướng & Phục Hưng Lối Sống Đẹp</h2>
+                <p class="text-slate-600">Sự kết hợp đồng bộ các giải pháp từ nỗ lực rèn luyện cá nhân đến sự đồng hành từ giáo dục gia đình, nhà trường và các cơ chế quản lý xã hội.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-2xl border border-gold-200 shadow-sm hover:translate-y-[-4px] transition duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-crimson-50 text-crimson-700 flex items-center justify-center text-xl mb-4 font-bold">01</div>
+                    <h3 class="font-bold text-crimson-800 text-lg mb-2">Tự rèn luyện cá nhân</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                        Người trẻ chủ động quản lý thời gian sử dụng công nghệ số; tham gia các hoạt động thiện nguyện xã hội, câu lạc bộ ngoại khóa và rèn luyện thể thao nhằm tái thiết lập trạng thái cân bằng Thân - Tâm lành mạnh.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-gold-200 shadow-sm hover:translate-y-[-4px] transition duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-crimson-50 text-crimson-700 flex items-center justify-center text-xl mb-4 font-bold">02</div>
+                    <h3 class="font-bold text-crimson-800 text-lg mb-2">Gia đình & Nhà trường</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                        Gia đình thiết lập lối sống giản dị, cha mẹ làm gương; nhà trường chuyển hướng chương trình giáo dục đạo đức từ lý thuyết suông sang trải nghiệm thực tế sinh động, trang bị bộ kỹ năng số lành mạnh cho học sinh.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-gold-200 shadow-sm hover:translate-y-[-4px] transition duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-crimson-50 text-crimson-700 flex items-center justify-center text-xl mb-4 font-bold">03</div>
+                    <h3 class="font-bold text-crimson-800 text-lg mb-2">Quản lý và Nêu gương</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                        Tăng cường truyền thông về gương "người tốt, việc tốt" trên các nền tảng trực tuyến; ngăn chặn các video độc hại, phản cảm; phát huy tính đầu tàu gương mẫu của các cán bộ, đảng viên trẻ để quần chúng học theo.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-gold-100 p-6 sm:p-10 rounded-2xl border border-gold-200 max-w-4xl mx-auto text-center space-y-4">
+                <i class="fa-solid fa-feather-pointed text-3xl text-gold-600"></i>
+                <h3 class="header-font text-xl sm:text-2xl font-bold text-crimson-800">Thông Điệp Khép Lại</h3>
+                <p class="text-sm text-slate-600 max-w-2xl mx-auto leading-relaxed italic">
+                    "Lối sống thực dụng và căn bệnh 'sống ảo' tuy là hồi chuông báo động, nhưng hoàn toàn có thể đẩy lùi nếu chúng ta biết khơi dậy sức mạnh văn hóa nội sinh. Đưa lý luận đạo đức Bác Hồ vào từng hành vi sinh hoạt nhỏ nhất mỗi ngày là chìa khóa bồi đắp thế hệ kế thừa 'vừa hồng vừa chuyên'."
+                </p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 mt-12 border-t-4 border-gold-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <p class="text-xs uppercase tracking-widest text-gold-500 font-bold">Chuyên đề học tập & rèn luyện tư tưởng đạo đức Hồ Chí Minh</p>
+            <p class="text-sm">&copy; 2026 Trang web tương tác bồi dưỡng kỹ năng thế hệ trẻ. Tất cả quyền được bảo lưu.</p>
+            <div class="flex justify-center gap-6 text-lg">
+                <a href="#" class="hover:text-gold-500 transition"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="hover:text-gold-500 transition"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="hover:text-gold-500 transition"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 1. Tab Switching logic
+        function switchTab(tabId) {
+            // Hide all tab content
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.add('hidden'));
+            contents.forEach(content => content.classList.remove('block'));
+
+            // Show active tab
+            const activeTab = document.getElementById(tabId);
+            activeTab.classList.remove('hidden');
+            activeTab.classList.add('block');
+
+            // Reset navigation button classes
+            const navButtons = document.querySelectorAll('.nav-btn');
+            navButtons.forEach(btn => {
+                btn.className = "nav-btn px-4 py-2 rounded-lg text-sm font-semibold transition duration-200 text-slate-600 hover:text-crimson-700 hover:bg-slate-50";
+            });
+
+            // Highlight current button
+            const activeBtn = document.getElementById('btn-' + tabId);
+            if (activeBtn) {
+                activeBtn.className = "nav-btn px-4 py-2 rounded-lg text-sm font-semibold transition duration-200 text-crimson-700 bg-gold-100";
+            }
+
+            // Scroll to view
+            window.scrollTo({ top: activeTab.offsetTop - 120, behavior: 'smooth' });
+        }
+
+        // 2. Interactive Quotes Database & Logic
+        const quotes =;
+        let currentQuoteIndex = 0;
+
+        function updateQuote() {
+            const container = document.getElementById('quote-container');
+            container.style.opacity = '0';
+            setTimeout(() => {
+                container.innerHTML = `
+                    <p class="header-font text-lg sm:text-xl italic text-crimson-800 font-semibold mb-3">
+                        "${quotes[currentQuoteIndex].text}"
+                    </p>
+                    <span class="text-xs uppercase tracking-wider font-bold text-gold-700">— ${quotes[currentQuoteIndex].author}</span>
+                `;
+                container.style.opacity = '1';
+            }, 300);
+        }
+
+        function nextQuote() {
+            currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
+            updateQuote();
+        }
+
+        function prevQuote() {
+            currentQuoteIndex = (currentQuoteIndex - 1 + quotes.length) % quotes.length;
+            updateQuote();
+        }
+
+        // 3. Virtues interactive display logic
+        const virtueDetails = {
+            can: {
+                title: "Cần (Cần Cù, Siêng Năng)",
+                desc: "Lao động cần cù, siêng năng, tự giác, có kế hoạch và đạt hiệu suất cao. Theo Chủ tịch Hồ Chí Minh, 'Cần' không chỉ là lao động chân tay chăm chỉ mà phải đi kèm tư duy sáng tạo, khoa học nhằm liên tục tối ưu hóa kết quả làm việc.",
+                interaction: "Là tiền đề tạo ra của cải vật chất; phải đi đôi với 'Kiệm' như hai chân của một con người. Cần mà không Kiệm giống như một chiếc thùng không đáy làm bao nhiêu hao phí bấy nhiêu."
+            },
+            kiem: {
+                title: "Kiệm (Tiết Kiệm, Giản Dị)",
+                desc: "Tiết kiệm thời gian, công sức và của cải của cá nhân, gia đình lẫn xã hội. Tránh xa lối sống xa xỉ, lòe loẹt, phô trương của cải, trưng trổ hình thức xa rời thực tế. Kiệm giúp giữ gìn tâm trí thanh thản, tự do khỏi lòng tham lam.",
+                interaction: "Là cơ sở để thực hiện chữ 'Liêm'. Người biết sống giản đơn, tiết kiệm mới không có nhu cầu tham ô, lừa gạt, hay dấn thân vào các mối quan hệ kim tiền bất chính để mưu cầu vật chất ảo."
+            },
+            liem: {
+                title: "Liêm (Trong Sạch, Tự Trọng)",
+                desc: "Luôn giữ tâm hồn và hành động trong sạch, không tham danh lợi, không mưu cầu địa vị, tiền tài bất chính. Chữ 'Liêm' đòi hỏi một lòng tự trọng cao cả, chống lại thói ham chuộng người tâng bốc mình và tự lừa dối người khác.",
+                interaction: "Chữ Liêm được duy trì bền bỉ nhờ chữ 'Kiệm'. Một người sống hoang phí thì dù thu nhập cao mấy cũng khó giữ được đức Liêm khi bị đặt trước các cám dỗ vật chất lớn."
+            },
+            chinh: {
+                title: "Chính (Thẳng Thắn, Chân Thành)",
+                desc: "Sống thẳng thắn, đứng đắn, thật thà. Đối với mình thì không được tự cao, kiêu ngạo mà luôn cầu thị học hỏi sửa sai; đối với người thì không dối trá nịnh hót; đối với công việc thì luôn chí công, nghiêm túc hết mình.",
+                interaction: "Cần, Kiệm, Liêm là gốc rễ của Chính. Một con người chỉ khi siêng năng, tiết kiệm, trong sạch mới có đủ dũng khí để giữ vững lập trường chân thật, đứng thẳng trước mọi giông bão cuộc đời."
+            },
+            chicong: {
+                title: "Chí Công Vô Tư",
+                desc: "Hoàn toàn vì lợi ích chung, luôn đặt lợi ích của tập thể, nhân dân và đất nước lên trên hết và trước hết. Đây chính là đỉnh cao của đạo đức cách mạng, sự dâng hiến vĩ đại quét sạch thói vị kỷ cá nhân chủ nghĩa.",
+                interaction: "Là hoa trái chín muồi của quá trình thực hành Cần, Kiệm, Liêm, Chính. Người thực hành tốt bốn đức tính trên thì tự nhiên sẽ đạt đến tầm cao của Chí công vô tư."
+            }
+        };
+
+        function showVirtue(key) {
+            // Remove active classes
+            document.querySelectorAll('.virtue-btn').forEach(btn => {
+                btn.classList.remove('border-crimson-500', 'shadow-md', 'active-virtue');
+            });
+
+            // Add active styles to current button
+            const activeBtn = document.getElementById('btn-virtue-' + key);
+            activeBtn.classList.add('border-crimson-500', 'shadow-md', 'active-virtue');
+
+            // Inject content
+            const detail = virtueDetails[key];
+            const display = document.getElementById('virtue-detail');
+            display.style.opacity = '0';
+            
+            setTimeout(() => {
+                display.innerHTML = `
+                    <div class="flex items-center gap-3">
+                        <span class="text-xs uppercase tracking-widest font-bold text-crimson-600">Đại Cương Đạo Đức</span>
+                        <div class="h-[1px] flex-1 bg-gold-200"></div>
+                    </div>
+                    <h3 class="header-font text-3xl font-bold text-crimson-800">${detail.title}</h3>
+                    <p class="text-slate-600 leading-relaxed">${detail.desc}</p>
+                    
+                    <div class="bg-crimson-50 border-l-4 border-crimson-500 p-4 rounded-r-lg">
+                        <h5 class="text-sm font-bold text-crimson-800 uppercase tracking-wider mb-1"><i class="fa-solid fa-code-merge mr-2"></i>Tương tác biện chứng</h5>
+                        <p class="text-sm text-slate-700 italic">${detail.interaction}</p>
+                    </div>
+                `;
+                display.style.opacity = '1';
+            }, 150);
+        }
+
+        // 4. Interactive Quiz Database & Logic
+        const quizData =
+            },
+            {
+                badge: "Mức độ chia sẻ trực tuyến",
+                question: "Khi thấy trào lưu 'phông bạt' (khoe khoang sang chảnh giả tạo) trên mạng, bạn nghĩ gì?",
+                options:
+            },
+            {
+                badge: "Lựa chọn nghề nghiệp",
+                question: "Khi chọn trường học hoặc định hướng nghề nghiệp, yếu tố nào quyết định lớn nhất đối với bạn?",
+                options:
+            },
+            {
+                badge: "Thực hành đạo đức",
+                question: "Đối với bạn, việc giữ chữ 'Liêm' (trong sạch, giữ lòng tự trọng) trong đời sống số thể hiện thế nào?",
+                options: [
+                    { text: "Không nói dối, không câu tương tác ảo, tôn trọng bản thân thực tế và tôn trọng của công.", points: 3 },
+                    { text: "Chỉ giữ mình không lừa đảo ai, còn hình ảnh trên mạng phóng đại một chút cũng không sao.", points: 2 },
+                    { text: "Chấp nhận tung tin giả, dựng video giật gân miễn là kiếm được tiền quy đổi từ tương tác.", points: 1 }
+                ]
+            }
+        ];
+
+        let currentQuestion = 0;
+        let totalScore = 0;
+
+        function loadQuestion() {
+            const currentData = quizData[currentQuestion];
+            document.getElementById('quiz-progress').innerText = `Câu hỏi ${currentQuestion + 1} / ${quizData.length}`;
+            document.getElementById('quiz-badge').innerText = currentData.badge;
+            document.getElementById('quiz-question').innerText = currentData.question;
+            
+            // Progress bar
+            const percent = ((currentQuestion + 1) / quizData.length) * 100;
+            document.getElementById('quiz-bar').style.width = percent + '%';
+
+            const optionsContainer = document.getElementById('quiz-options');
+            optionsContainer.innerHTML = '';
+
+            currentData.options.forEach((opt, index) => {
+                const button = document.createElement('button');
+                button.className = "w-full text-left p-4 rounded-xl border border-slate-200 bg-slate-50 hover:border-crimson-500 hover:bg-crimson-50/30 transition text-sm text-slate-700 flex justify-between items-center group";
+                button.innerHTML = `
+                    <span>${opt.text}</span>
+                    <i class="fa-solid fa-circle-chevron-right text-slate-300 group-hover:text-crimson-500 transition"></i>
+                `;
+                button.onclick = () => selectOption(opt.points);
+                optionsContainer.appendChild(button);
+            });
+        }
+
+        function selectOption(points) {
+            totalScore += points;
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                loadQuestion();
+            } else {
+                showResult();
+            }
+        }
+
+        function showResult() {
+            document.getElementById('quiz-card').classList.add('hidden');
+            const resultBox = document.getElementById('quiz-result');
+            resultBox.classList.remove('hidden');
+
+            const resultText = document.getElementById('result-text');
+            
+            if (totalScore >= 10) {
+                resultText.innerHTML = `
+                    <strong class="text-emerald-700 block text-lg mb-2"><i class="fa-solid fa-shield-halved mr-1"></i>Bản Lĩnh Vững Vàng (Cần - Kiệm - Chính)</strong>
+                    Bạn duy trì được bản lĩnh tự chủ tốt trước cám dỗ mạng xã hội. Bạn luôn đề cao giá trị năng lực và đạo đức thực chất ngoài đời thực. Hãy tiếp tục phát huy và trở thành tấm gương lan tỏa lối sống đẹp đến cộng đồng xung quanh bạn.
+                `;
+            } else if (totalScore >= 7) {
+                resultText.innerHTML = `
+                    <strong class="text-orange-700 block text-lg mb-2"><i class="fa-solid fa-triangle-exclamation mr-1"></i>Bị Ảnh Hưởng Nhẹ (Cần Thận Trọng)</strong>
+                    Bạn đang chịu ảnh hưởng nhất định bởi lối sống thực dụng và các trào lưu phô trương hình thức. Đôi khi bạn quên mất việc chăm sóc thế giới tinh thần thực tế. Hãy rèn luyện thêm chữ 'Kiệm' và dành nhiều thời gian hơn để giao tiếp, hoạt động thiện nguyện ngoài xã hội.
+                `;
+            } else {
+                resultText.innerHTML = `
+                    <strong class="text-rose-700 block text-lg mb-2"><i class="fa-solid fa-radiation mr-1"></i>Cảnh Báo Lệ Thuộc (Cần Chuyển Hóa Ngay)</strong>
+                    Bạn đang quá phụ thuộc vào không gian ảo và có xu hướng đặt vật chất hào nhoáng làm thước đo duy nhất. Lối sống này làm xói mòn lòng tự trọng chân chính và làm suy yếu sức khỏe thể chất lẫn tinh thần của bạn. Hãy nghiêm túc thực hành tự phê bình, tiết chế mạng xã hội và hướng tới các mục tiêu thực tế ý nghĩa hơn.
+                `;
+            }
+        }
+
+        function restartQuiz() {
+            currentQuestion = 0;
+            totalScore = 0;
+            document.getElementById('quiz-result').classList.add('hidden');
+            document.getElementById('quiz-card').classList.remove('hidden');
+            loadQuestion();
+        }
+
+        // Initialize quiz on load
+        window.onload = function() {
+            loadQuestion();
+        };
+    </script>
+</body>
+</html>
